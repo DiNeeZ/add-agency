@@ -1,0 +1,45 @@
+@import "./vars.scss";
+@import "./mixins.scss";
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+  color: $gray-color;
+  background-color: $light-gray-color;
+  scroll-behavior: smooth;
+
+  &.dis-scroll {
+    @include dis-scroll;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 7.5rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
