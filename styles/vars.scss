@@ -1,10 +1,14 @@
 // base
-$content-width: 1110px;
-$container-offset: 16px;
+$content-width: 1200px;
+$container-offset: 15px;
 $container-width: calc($content-width + ($container-offset * 2));
 
-$border-radius: 0.375rem;
-$gap: 1.875rem;
+$font-md: calc((18 / 16) * 1rem);
+$font-sm: calc((14 / 16) * 1rem);
+
+$border-radius-sm: calc((10 / 16) * 1rem);
+$border-radius-md: calc((14 / 16) * 1rem);
+$border-radius-lg: 1rem;
 
 // colors
 $black-color: #000000;
