@@ -7,13 +7,12 @@ const Header = () => {
       <div className={styles.container}>
         <h1>Header</h1>
         <div className={styles.wrapper}>
-          <Button
-            variant="primary"
-            handleClick={() => console.log("Зарегистрируемся!")}
-          >
+          {/* Кнопка по умолчанию */}
+          <Button handleClick={() => console.log("Зарегистрируемся!")}>
             Зарегистрироваться
           </Button>
 
+          {/* Кнопка с темой "Teal" */}
           <Button
             theme="teal"
             handleClick={() => console.log("Зарабатываем больше!")}
@@ -21,6 +20,7 @@ const Header = () => {
             Заработать больше
           </Button>
 
+          {/* Маленькая кнопка по умолчанию */}
           <Button
             variant="secondary"
             handleClick={() => console.log("Входим!!!")}
@@ -28,6 +28,7 @@ const Header = () => {
             Войти
           </Button>
 
+          {/* Маленькая кнопка с темой "Teal"  */}
           <Button
             variant="secondary"
             theme="teal"

@@ -25,8 +25,6 @@ const gilroy = localFont({
   ],
 });
 
-console.log(gilroy);
-
 const App = ({ Component, pageProps }) => (
   <>
     <style jsx global>{`
