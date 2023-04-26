@@ -1,0 +1,37 @@
+@import "../../../styles/vars.scss";
+@import "../../../styles/mixins.scss";
+
+.dropdown {
+  position: relative;
+}
+
+.button {
+  @include btn-reset;
+  // position: relative;
+  font-weight: 600;
+  font-size: $font-sm;
+  color: $gray-color;
+  padding: 4px 22px 4px 7px;
+  background-color: $white-color;
+  border-radius: 0.375rem;
+}
+
+.icon {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-35%);
+
+  &.opened {
+    transform-origin: center 35%;
+    transform: rotate(180deg);
+  }
+}
+
+.list {
+  @include list-reset;
+  position: absolute;
+  background-color: $teal-color;
+}

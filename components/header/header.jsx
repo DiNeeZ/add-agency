@@ -1,4 +1,5 @@
 import Button from "../UI/button/button";
+import Dropdown from "../UI/dropdown/dropdown";
 import styles from "./header.module.scss";
 
 const Header = () => {
@@ -36,6 +37,9 @@ const Header = () => {
           >
             Регистрация
           </Button>
+
+          {/* dropdown */}
+          <Dropdown options={["Рус", "Eng", "Md", "Bolg"]} />
         </div>
       </div>
     </header>
