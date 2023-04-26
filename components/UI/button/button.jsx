@@ -1,31 +1,21 @@
 import styles from "./button.module.scss";
 
-const Button = ({
-  children,
-  handleClick,
-  variant = "primary",
-  theme = "purple",
-}) => {
-  const variantClass = variant === "secondary" ? "secondary" : false;
-  const themeClass = theme === "teal" ? "teal" : false;
-
-  const getButtonClassName = (variant, theme) => {
+const Button = ({ children, handleClick, variant, theme }) => {
+  const getButtonClassName = () => {
     if ([variant, theme].every(Boolean))
-      return `${styles.button} ${styles[variantClass]} ${styles[themeClass]}`;
+      return `${styles.button} ${styles[variant]} ${styles[theme]}`;
 
     if ([variant, theme].some(Boolean)) {
-      return variant === false
-        ? `${styles.button} ${styles[themeClass]}`
-        : `${styles.button} ${styles[variantClass]}`;
+      return variant === undefined
+        ? `${styles.button} ${styles[theme]}`
+        : `${styles.button} ${styles[variant]}`;
     }
 
     return `${styles.button}`;
   };
 
-  const buttonClassname = getButtonClassName(variantClass, themeClass);
-
   return (
-    <button className={buttonClassname} onClick={handleClick}>
+    <button className={getButtonClassName()} onClick={handleClick}>
       {children}
     </button>
   );
