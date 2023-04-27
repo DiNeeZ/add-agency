@@ -1,54 +1,73 @@
-import Button from "../UI/button/button";
+import Link from "next/link";
+
+import Logo from "../UI/logo/logo";
 import LanguageSelector from "../UI/language-switcher/language-switcher";
-import Dropdown from "../UI/dropdown/dropdown";
+import Button from "../UI/button/button";
+
 import styles from "./header.module.scss";
 
 const Header = () => {
   const laguageList = ["Eng", "Rus"];
-  const contactMethods = [
-    "Phone",
-    "Telegram",
-    "WhatsApp",
-    "Skype",
-    "E-mail",
-    "other",
-  ];
+  // const contactMethods = [
+  //   "Phone",
+  //   "Telegram",
+  //   "WhatsApp",
+  //   "Skype",
+  //   "E-mail",
+  //   "other",
+  // ];
 
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.container}>
-        <h1>Header</h1>
-        <div className={styles.wrapper}>
-          <Button handleClick={() => console.log("Зарегистрируемся!")}>
-            Зарегистрироваться
-          </Button>
+        <Logo />
 
-          <Button
-            theme="teal"
-            handleClick={() => console.log("Зарабатываем больше!")}
-          >
-            Заработать больше
-          </Button>
+        <nav className={styles.navigation}>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
+              <Link href="/" className={styles.navLink}>
+                Рекламодателю
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/" className={styles.navLink}>
+                Вебмастеру
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/" className={styles.navLink}>
+                Форматы
+              </Link>
+            </li>
+          </ul>
 
-          <Button
-            variant="secondary"
-            handleClick={() => console.log("Входим!!!")}
-          >
-            Войти
-          </Button>
+          <ul className={`${styles.navList} ${styles.colorLight}`}>
+            <li className={styles.navItem}>
+              <Link href="/" className={styles.navLink}>
+                Вебмастеру
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link href="/" className={styles.navLink}>
+                Форматы
+              </Link>
+            </li>
+          </ul>
 
-          <Button
-            variant="secondary"
-            theme="teal"
-            handleClick={() => console.log("И снова регистрируемся!")}
-          >
-            Регистрация
-          </Button>
-
-          <LanguageSelector languages={laguageList} />
-
-          <Dropdown options={contactMethods} label={"Contact methods"} />
-        </div>
+          <ul className={`${styles.navList} ${styles.buttons}`}>
+            <li className={styles.navItem}>
+              <LanguageSelector languages={laguageList} />
+            </li>
+            <li className={styles.navItem}>
+              <div className={styles.btnGroup}>
+                <Button variant="secondary">Войти</Button>
+                <Button variant="secondary" theme="teal">
+                  Регистрация
+                </Button>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

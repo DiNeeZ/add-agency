@@ -1,0 +1,8 @@
+@import "@/styles/vars.scss";
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline-color: $purple-color;
+}

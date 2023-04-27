@@ -1,12 +1,72 @@
-@import "../../styles/vars.scss";
-@import "../../styles/mixins.scss";
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: transparent;
+}
 
 .container {
   @include container;
-}
-
-.wrapper {
   display: flex;
   align-items: center;
-  gap: 2em;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.navList {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+
+  &.buttons {
+    gap: 2rem;
+  }
+}
+
+.navLink {
+  position: relative;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: $font-sm;
+  line-height: 1.4rem;
+  color: $gray-color;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+
+  &.colorLight {
+    color: rgba($white-color, 0.8);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $purple-color;
+
+    &:after {
+      background-color: $purple-color;
+    }
+  }
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
