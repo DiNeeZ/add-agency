@@ -3,35 +3,99 @@
 
 .dropdown {
   position: relative;
+  min-width: 11.875rem;
+
+  &.opened {
+    .button {
+      font-weight: 600;
+      background: linear-gradient(
+          0deg,
+          rgba($black-color, 0.1),
+          rgba($black-color, 0.1)
+        ),
+        $light-teal-color;
+      box-shadow: none;
+    }
+
+    .icon {
+      transform-origin: center 35%;
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .button {
   @include btn-reset;
-  // position: relative;
-  font-weight: 600;
-  font-size: $font-sm;
-  color: $gray-color;
-  padding: 4px 22px 4px 7px;
-  background-color: $white-color;
-  border-radius: 0.375rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: calc((18 / 16) * 1rem);
+  font-weight: 400;
+  font-size: $font-md;
+  color: $dark-grey-color;
+  background-color: $light-teal-color;
+  border-radius: $border-radius-md;
+  box-shadow: 0px 8px 8px -6px rgba($black-color, 0.25);
+  outline: none;
+  overflow: hidden;
+  z-index: 2;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+        0deg,
+        rgba($black-color, 0.1),
+        rgba($black-color, 0.1)
+      ),
+      $light-teal-color;
+  }
 }
 
 .icon {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-35%);
-
-  &.opened {
-    transform-origin: center 35%;
-    transform: rotate(180deg);
-  }
+  transform: translateY(1px);
+  fill: currentColor;
 }
 
 .list {
   @include list-reset;
   position: absolute;
-  background-color: $teal-color;
+  width: 100%;
+  margin-top: -14px;
+  padding-top: 14px;
+  background-color: $white-color;
+  box-shadow: 0px 8px 8px -6px rgba($black-color, 0.25);
+  background-color: $light-teal-color;
+  border-bottom-left-radius: $border-radius-md;
+  border-bottom-right-radius: $border-radius-md;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.item {
+  cursor: pointer;
+
+  &:hover {
+    color: $purple-color;
+  }
+}
+
+.itemBtn {
+  @include btn-reset;
+  width: 100%;
+  padding: calc((18 / 16) * 1rem);
+  font-size: $font-md;
+  font-weight: 400;
+  text-align: left;
+  color: $gray-color;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #31a59e;
+    background: rgba(#3ac2ba, 0.2);
+  }
 }

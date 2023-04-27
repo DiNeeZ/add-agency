@@ -1,0 +1,80 @@
+@import "../../../styles/vars.scss";
+@import "../../../styles/mixins.scss";
+
+.selector {
+  position: relative;
+
+  &.opened {
+    .button {
+      color: $purple-color;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .icon {
+      transform-origin: center center;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.button {
+  @include btn-reset;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: $font-sm;
+  color: $gray-color;
+  padding: 4px 7px;
+  background-color: $white-color;
+  border-radius: 0.375rem;
+  box-shadow: 0px 8px 8px -6px rgba($black-color, 0.25);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $purple-color;
+    box-shadow: 0px 10px 8px -6px rgba($black-color, 0.25);
+  }
+}
+
+.icon {
+  fill: currentColor;
+  transform: translateY(1px);
+}
+
+.dropdown {
+  @include list-reset;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -1px;
+  background-color: $white-color;
+  box-shadow: 0px 10px 8px -6px rgba($black-color, 0.25);
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-within {
+    color: $purple-color;
+  }
+}
+
+.itemBtn {
+  @include btn-reset;
+  padding: 4px 7px;
+  font-weight: 600;
+  font-size: $font-sm;
+  color: $gray-color;
+  text-align: left;
+  color: currentColor;
+  outline: none;
+}

@@ -1,19 +1,28 @@
 import Button from "../UI/button/button";
+import LanguageSelector from "../UI/language-switcher/language-switcher";
 import Dropdown from "../UI/dropdown/dropdown";
 import styles from "./header.module.scss";
 
 const Header = () => {
+  const laguageList = ["Eng", "Rus"];
+  const contactMethods = [
+    "Phone",
+    "Telegram",
+    "WhatsApp",
+    "Skype",
+    "E-mail",
+    "other",
+  ];
+
   return (
     <header>
       <div className={styles.container}>
         <h1>Header</h1>
         <div className={styles.wrapper}>
-          {/* Кнопка по умолчанию */}
           <Button handleClick={() => console.log("Зарегистрируемся!")}>
             Зарегистрироваться
           </Button>
 
-          {/* Кнопка с темой "Teal" */}
           <Button
             theme="teal"
             handleClick={() => console.log("Зарабатываем больше!")}
@@ -21,7 +30,6 @@ const Header = () => {
             Заработать больше
           </Button>
 
-          {/* Маленькая кнопка по умолчанию */}
           <Button
             variant="secondary"
             handleClick={() => console.log("Входим!!!")}
@@ -29,7 +37,6 @@ const Header = () => {
             Войти
           </Button>
 
-          {/* Маленькая кнопка с темой "Teal"  */}
           <Button
             variant="secondary"
             theme="teal"
@@ -38,8 +45,9 @@ const Header = () => {
             Регистрация
           </Button>
 
-          {/* dropdown */}
-          <Dropdown options={["Рус", "Eng", "Md", "Bolg"]} />
+          <LanguageSelector languages={laguageList} />
+
+          <Dropdown options={contactMethods} label={"Contact methods"} />
         </div>
       </div>
     </header>
