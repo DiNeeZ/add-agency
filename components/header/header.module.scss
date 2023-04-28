@@ -2,9 +2,15 @@
 @import "@/styles/mixins.scss";
 
 .header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: transparent;
+  z-index: 2;
 }
 
 .container {
@@ -17,22 +23,44 @@
 .navigation {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 7.3125rem;
 }
 
 .navList {
   @include list-reset;
   display: flex;
   align-items: center;
+  gap: 2rem;
 
   &.buttons {
     gap: 2rem;
+  }
+
+  &:first-child {
+    margin-right: 0.8125rem;
+  }
+
+  &:nth-child(2) {
+    color: $white-color;
+
+    a {
+      color: currentColor;
+
+      &:hover,
+      &:focus {
+        color: $white-color;
+
+        &:after {
+          background-color: $white-color;
+        }
+      }
+    }
   }
 }
 
 .navLink {
   position: relative;
-  padding: 1rem;
+  padding: 1rem 0;
   font-weight: 600;
   font-size: $font-sm;
   line-height: 1.4rem;

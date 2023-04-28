@@ -1,0 +1,52 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.offer {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("/images/decorations/offer-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    z-index: -1;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.container {
+  @include container-right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 168px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 25px 40px;
+  background-color: $white-color;
+  border-radius: $border-radius-lg;
+}
+
+.icon {
+  height: 81px;
+}

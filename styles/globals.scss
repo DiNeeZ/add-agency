@@ -19,7 +19,7 @@ body {
   min-width: 320px;
   min-height: 100%;
   font-size: $font-md;
-  line-height: 1.1rem;
+  line-height: 1.1;
   color: $gray-color;
   background-color: $light-smoke-color;
   scroll-behavior: smooth;
@@ -27,13 +27,6 @@ body {
   &.dis-scroll {
     @include dis-scroll;
   }
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 7.5rem;
 }
 
 img {

@@ -1,6 +1,8 @@
 import Head from "next/head";
 
 import Header from "@/components/header/header";
+import Hero from "@/components/hero/hero";
+import Offer from "@/components/offer/offer";
 
 const Home = () => {
   return (
@@ -9,7 +11,13 @@ const Home = () => {
         <title>Marketbite</title>
       </Head>
       <Header />
-      <main className={`slkd`}></main>
+      <main>
+        <Hero />
+        <Hero />
+        <Hero />
+        <Hero />
+        <Offer />
+      </main>
     </>
   );
 };

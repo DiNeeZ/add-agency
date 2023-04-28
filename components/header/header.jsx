@@ -26,17 +26,17 @@ const Header = () => {
           <ul className={styles.navList}>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>
-                Рекламодателю
+                To the Advertiser
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>
-                Вебмастеру
+                To the Webmaster
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>
-                Форматы
+                Formats
               </Link>
             </li>
           </ul>
@@ -44,12 +44,12 @@ const Header = () => {
           <ul className={`${styles.navList} ${styles.colorLight}`}>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>
-                Вебмастеру
+                FAQ
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink}>
-                Форматы
+                Contacts
               </Link>
             </li>
           </ul>
@@ -60,9 +60,9 @@ const Header = () => {
             </li>
             <li className={styles.navItem}>
               <div className={styles.btnGroup}>
-                <Button variant="secondary">Войти</Button>
+                <Button variant="secondary">Log In</Button>
                 <Button variant="secondary" theme="teal">
-                  Регистрация
+                  Registration
                 </Button>
               </div>
             </li>

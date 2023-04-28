@@ -45,6 +45,10 @@
   max-width: $container-width;
 }
 
+@mixin container-right {
+  padding-right: max($container-offset, calc((100% - $content-width) / 2));
+}
+
 @mixin dis-scroll {
   position: fixed;
   left: 0;
@@ -64,6 +68,12 @@
 }
 
 // breackpoints
+
+@mixin for-2k-desktop {
+  @media (min-width: (2048px)) {
+    @content;
+  }
+}
 
 @mixin for-desktop {
   @media (min-width: (1025px)) {
