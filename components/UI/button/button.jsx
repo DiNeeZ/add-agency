@@ -1,6 +1,7 @@
+import { forwardRef } from 'react'
 import styles from "./button.module.scss";
 
-const Button = ({ children, handleClick, variant, theme }) => {
+const Button = forwardRef(({ children, handleClick, variant, theme }, ref) => {
   const getButtonClassName = () => {
     if ([variant, theme].every(Boolean))
       return `${styles.button} ${styles[variant]} ${styles[theme]}`;
@@ -15,10 +16,12 @@ const Button = ({ children, handleClick, variant, theme }) => {
   };
 
   return (
-    <button className={getButtonClassName()} onClick={handleClick}>
+    <button ref={ref} className={getButtonClassName()} onClick={handleClick}>
       {children}
     </button>
   );
-};
+})
+
+Button.displayName = 'Button'
 
 export default Button;

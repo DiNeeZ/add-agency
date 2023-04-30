@@ -13,9 +13,6 @@ const Home = () => {
       <Header />
       <main>
         <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
         <Offer />
       </main>
     </>

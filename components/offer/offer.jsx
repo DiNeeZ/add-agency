@@ -3,24 +3,20 @@ import { motion } from "framer-motion";
 import Title from "../UI/title/title";
 
 import { offers } from "@/data";
-import { zoomIn } from "@/utils/motion";
+import { stairsAnimation } from "@/utils/motion";
 import styles from "./offer.module.scss";
+import Image from 'next/image';
+
+
 
 const Offer = () => {
   return (
-    <section className={styles.offer}>
+    <motion.section
+
+      className={styles.offer}>
       <div className={styles.container}>
+        <Image className={styles.image} src='/images/offers.png' width={715} height={667} alt='phone with adds' />
         <div className={styles.content}>
-          <motion.p
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis,
-            officia! Suscipit exercitationem vel ea reprehenderit voluptates
-            eligendi quasi temporibus hic cupiditate optio, distinctio obcaecati
-            velit nobis itaque officiis quas similique!
-          </motion.p>
           <Title>We Offer</Title>
           <ul className={styles.list}>
             {offers.map((offer, index) => {
@@ -28,8 +24,11 @@ const Offer = () => {
               return (
                 <motion.li
                   key={`offer-${label}`}
+                  initial='hidden'
+                  whileInView='visible'
+                  custom={index}
+                  variants={stairsAnimation}
                   className={styles.item}
-                  variants={zoomIn(300, 300)}
                 >
                   <div className={styles.itemInfo}>
                     <h3 className={styles.itemTitle}>{label}</h3>
@@ -42,7 +41,7 @@ const Offer = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
