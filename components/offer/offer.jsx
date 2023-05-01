@@ -5,17 +5,19 @@ import Title from "../UI/title/title";
 import { offers } from "@/data";
 import { stairsAnimation } from "@/utils/motion";
 import styles from "./offer.module.scss";
-import Image from 'next/image';
-
-
+import Image from "next/image";
 
 const Offer = () => {
   return (
-    <motion.section
-
-      className={styles.offer}>
+    <motion.section className={styles.offer}>
       <div className={styles.container}>
-        <Image className={styles.image} src='/images/offers.png' width={715} height={667} alt='phone with adds' />
+        <Image
+          className={styles.image}
+          src="/images/offers.png"
+          width={715}
+          height={667}
+          alt="phone with adds"
+        />
         <div className={styles.content}>
           <Title>We Offer</Title>
           <ul className={styles.list}>
@@ -24,8 +26,9 @@ const Offer = () => {
               return (
                 <motion.li
                   key={`offer-${label}`}
-                  initial='hidden'
-                  whileInView='visible'
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                   custom={index}
                   variants={stairsAnimation}
                   className={styles.item}

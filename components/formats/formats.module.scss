@@ -1,0 +1,55 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.formats {
+  padding: 120px 0;
+}
+
+.container {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+  align-items: center;
+
+  h2 {
+    grid-column: span 1;
+  }
+}
+
+.subtitle {
+  grid-column: span 2;
+  position: relative;
+  max-width: 432px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: $dark-grey-color;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -1.875rem;
+    transform: translate(-100%, -50%);
+    width: 7.5rem;
+    height: 2px;
+    border-radius: 1px;
+    background-color: rgba($purple-color, 0.1);
+  }
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons {
+  grid-column: span 1;
+  background-color: $light-grey-color;
+}
+
+.showcase {
+  grid-column: span 2;
+  background-color: $light-grey-color;
+}
