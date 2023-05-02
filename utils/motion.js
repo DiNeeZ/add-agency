@@ -39,3 +39,17 @@ export const zoomIn = (duration) => ({
     },
   },
 });
+
+export const fadeIn = (direction) => ({
+  hidden: {
+    opacity: 0,
+    x: direction === 'left' ? -300 : direction === 'right' ? 300 : 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1
+    }
+  }
+})

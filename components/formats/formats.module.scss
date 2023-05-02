@@ -101,6 +101,14 @@
   box-shadow: 12px 21px 12px -8px rgba($black-color, 0.05);
   cursor: pointer;
 
+  &.current {
+    background-color: $purple-color;
+
+    .buttonTitle {
+      color: $white-color;
+    }
+  }
+
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -111,6 +119,12 @@
 
       .buttonTitle {
         color: $purple-color;
+      }
+
+      &.current {
+        .buttonTitle {
+          color: $white-color;
+        }
       }
     }
   }
@@ -130,6 +144,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.875rem;
+  z-index: -1;
 }
 
 .image {
