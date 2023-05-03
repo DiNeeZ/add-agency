@@ -4,7 +4,8 @@ export const stairsAnimation = {
     x: `${custom * 82}px`,
     opacity: 1,
     transition: {
-      delay: custom * 0.25,
+      delay: custom * 0.05,
+      duration: 0.75,
       type: "tween",
     },
   }),
