@@ -75,7 +75,7 @@ const Advantages = () => (
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className={styles.columns}
       >
         <motion.div variants={textAnimation()} className={styles.only}>
