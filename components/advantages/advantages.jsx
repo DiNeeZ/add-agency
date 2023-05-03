@@ -62,7 +62,7 @@ const MotionTitle = motion(Title);
 const MotionSubtitle = motion(Subtitle);
 
 const Advantages = () => (
-  <section className={styles.advantages}>
+  <section id="advantages" className={styles.advantages}>
     <div className={styles.container}>
       <div className={styles.heading}>
         <MotionSubtitle custom={1} variants={textAnimation()}>
@@ -72,14 +72,13 @@ const Advantages = () => (
           Pump up your business
         </MotionTitle>
       </div>
-      <div className={styles.columns}>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={textAnimation()}
-          className={styles.only}
-        >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        className={styles.columns}
+      >
+        <motion.div variants={textAnimation()} className={styles.only}>
           <h3 className={styles.title}>
             Thematic traffic by different categories
           </h3>
@@ -90,25 +89,15 @@ const Advantages = () => (
         </motion.div>
 
         <div className={styles.double}>
-          <motion.ul
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className={styles.numsList}
-          >
+          <ul className={styles.numsList}>
             {numsOfAdvantages.map((num, index) => renderNum(num, index))}
-          </motion.ul>
+          </ul>
 
-          <motion.ul
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className={styles.listCards}
-          >
+          <ul className={styles.listCards}>
             {advantageCards.map((card, index) => renderCard(card, index))}
-          </motion.ul>
+          </ul>
         </div>
-      </div>
+      </motion.div>
 
       <div className={styles.bottom}>
         <Button>Pump the business</Button>

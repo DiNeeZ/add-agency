@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 import Title from "../UI/title/title";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import { formats } from "@/data";
-import { fadeIn } from '@/utils/motion';
+import { fadeIn } from "@/utils/motion";
 
 import "overlayscrollbars/overlayscrollbars.css";
 import styles from "./formats.module.scss";
@@ -24,8 +24,7 @@ const Formats = () => {
   const FormatImage = formats[currentIndex].image;
 
   return (
-    <section
-      className={styles.formats}>
+    <section id="formats" className={styles.formats}>
       <div className={styles.container}>
         <Title>Formats</Title>
         <p className={styles.subtitle}>
@@ -48,7 +47,11 @@ const Formats = () => {
                   key={id}
                   data-id={id}
                   onClick={handleButtonClick}
-                  className={index === currentIndex ? `${styles.button} ${styles.current}` : `${styles.button}`}
+                  className={
+                    index === currentIndex
+                      ? `${styles.button} ${styles.current}`
+                      : `${styles.button}`
+                  }
                 >
                   <Thumbnail />
                   <h4 className={styles.buttonTitle}>{title}</h4>
@@ -57,11 +60,16 @@ const Formats = () => {
             })}
           </ul>
         </OverlayScrollbarsComponent>
-        <motion.div key={currentIndex} initial="hidden" animate="visible" className={styles.showcase}>
-          <motion.div variants={fadeIn('left')} className={styles.imageWraper}>
+        <motion.div
+          key={currentIndex}
+          initial="hidden"
+          animate="visible"
+          className={styles.showcase}
+        >
+          <motion.div variants={fadeIn("left")} className={styles.imageWraper}>
             <FormatImage className={styles.image} />
           </motion.div>
-          <motion.div variants={fadeIn('right')}>
+          <motion.div variants={fadeIn("right")}>
             <h3 className={styles.formatTitle}>
               {formats[currentIndex].title}
             </h3>
@@ -84,7 +92,6 @@ const Formats = () => {
         </motion.div>
       </div>
     </section>
-
   );
 };
 

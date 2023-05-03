@@ -25,7 +25,11 @@ const Header = () => {
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>
+              <Link
+                href="#advantages"
+                scroll={false}
+                className={styles.navLink}
+              >
                 To the Advertiser
               </Link>
             </li>
@@ -35,7 +39,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>
+              <Link href="#formats" scroll={false} className={styles.navLink}>
                 Formats
               </Link>
             </li>
