@@ -19,6 +19,16 @@ import Push from "@/assets/images/formats/push.svg";
 import PushThumbnail from "@/assets/images/formats/push-thumbnail.svg";
 import Inpage from "@/assets/images/formats/inpage.svg";
 import InpageThumbnail from "@/assets/images/formats/inpage-thumbnail.svg";
+import Suit from "@/assets/images/icons/suit.svg";
+import DollarSign from "@/assets/images/icons/dollar-sign.svg";
+import Heart from "@/assets/images/icons/heart.svg";
+import Cart from "@/assets/images/icons/cart.svg";
+import Games from "@/assets/images/icons/games.svg";
+import MedicineBottle from "@/assets/images/icons/medicine-bottle.svg";
+import GenderIntersex from "@/assets/images/icons/gender-intersex.svg";
+import Gift from "@/assets/images/icons/gift.svg";
+import TagP from "@/assets/images/icons/tag-p.svg";
+import SupportP from "@/assets/images/icons/support-p.svg";
 
 export const offers = [
   {
@@ -132,5 +142,82 @@ export const formats = [
     dailyVolume: "1 billion",
     image: Inpage,
     thumbnail: InpageThumbnail,
+  },
+];
+
+export const tematic = [
+  {
+    id: "tematic-gambling-and-entertainment",
+    label: "Gambling and Entertainment",
+    icon: Suit,
+  },
+  {
+    id: "tematic-finance",
+    label: "Finance",
+    icon: DollarSign,
+  },
+  {
+    id: "tematic-dating",
+    label: "Dating",
+    icon: Heart,
+  },
+  {
+    id: "tematic-e-commerce",
+    label: "E-commerce",
+    icon: Cart,
+  },
+  {
+    id: "tematic-gaming-apps",
+    label: "Gaming & Apps",
+    icon: Games,
+  },
+  {
+    id: "tematic-health-medicine",
+    label: "Health & Medicine",
+    icon: MedicineBottle,
+  },
+  {
+    id: "tematic-18",
+    label: "18+",
+    icon: GenderIntersex,
+  },
+];
+
+export const numsOfAdvantages = [
+  {
+    id: "verified-sites-applications",
+    label: "Traffic of verified sites and applications",
+    num: 5000,
+  },
+  {
+    id: "visitors-your-customers",
+    label: "Visitors monthly can be your customers",
+    num: 300000000,
+  },
+  {
+    id: "campaign-targeting-settings",
+    label: "Campaign targeting settings",
+    num: 12,
+  },
+];
+
+export const advantageCards = [
+  {
+    id: "loyalty-programs",
+    title: "Loyalty Programs",
+    subtitle: "cashback, postpaid",
+    icon: Gift,
+  },
+  {
+    id: "protocols-integration",
+    title: "Protocols integration ",
+    subtitle: "XML/JSON and oRTB",
+    icon: TagP,
+  },
+  {
+    id: "support-24-7",
+    title: "24/7 support with ",
+    subtitle: "personal manager",
+    icon: SupportP,
   },
 ];

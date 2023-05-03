@@ -43,13 +43,28 @@ export const zoomIn = (duration) => ({
 export const fadeIn = (direction) => ({
   hidden: {
     opacity: 0,
-    x: direction === 'left' ? -300 : direction === 'right' ? 300 : 0,
+    x: direction === "left" ? -300 : direction === "right" ? 300 : 0,
   },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 1
-    }
-  }
-})
+      duration: 0.75,
+    },
+  },
+});
+
+export const cascade = () => ({
+  hidden: (custom) => ({
+    opacity: 0,
+    y: -100 * custom,
+  }),
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      delay: custom * 0.5,
+    },
+  }),
+});

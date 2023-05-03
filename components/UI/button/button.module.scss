@@ -11,7 +11,8 @@
   background-color: $purple-color;
   border-radius: $border-radius-md;
   box-shadow: 0px 10px 10px -4px rgba($purple-color, 0.15);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   outline: none;
 
   &:hover,
@@ -36,6 +37,38 @@
 
     &:active {
       box-shadow: inset 0px 4px 6px rgba($black-color, 0.15);
+    }
+  }
+
+  &.transparent {
+    min-width: 10rem;
+    padding: 0;
+    font-weight: 400;
+    font-size: $font-sm;
+    line-height: 1.4;
+    color: $purple-color;
+    text-align: left;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      color: darken($purple-color, 10);
+    }
+  }
+
+  &.transparent-teal {
+    min-width: 10rem;
+    padding: 0;
+    font-weight: 400;
+    font-size: $font-sm;
+    line-height: 1.4;
+    color: $teal-color;
+    text-align: left;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      color: darken($teal-color, 10);
     }
   }
 

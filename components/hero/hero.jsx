@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
@@ -22,6 +21,7 @@ const Hero = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true }}
       className={styles.hero}
     >
       <div className={styles.heroBg} />
@@ -32,7 +32,7 @@ const Hero = () => {
               Major advertising network
             </MotionTitle>
 
-            <MotionSubtitle custom={2} variants={textAnimation()}>
+            <MotionSubtitle size="l" custom={2} variants={textAnimation()}>
               To buy and sell traffic
             </MotionSubtitle>
           </div>
