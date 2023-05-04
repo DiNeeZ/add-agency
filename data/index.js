@@ -29,6 +29,12 @@ import GenderIntersex from "@/assets/images/icons/gender-intersex.svg";
 import Gift from "@/assets/images/icons/gift.svg";
 import TagP from "@/assets/images/icons/tag-p.svg";
 import SupportP from "@/assets/images/icons/support-p.svg";
+import Wallet from "@/assets/images/icons/wallet.svg";
+import Clock from "@/assets/images/icons/clock.svg";
+import Globe from "@/assets/images/icons/globe.svg";
+import Ads from "@/assets/images/icons/ads.svg";
+import Tag from "@/assets/images/icons/tag.svg";
+import Support from "@/assets/images/icons/support.svg";
 
 export const offers = [
   {
@@ -219,5 +225,43 @@ export const advantageCards = [
     title: "24/7 support with ",
     subtitle: "personal manager",
     icon: SupportP,
+  },
+];
+
+export const webmasterBenefits = [
+  {
+    id: "benefit-wallet",
+    text: "High royalties from direct advertisers",
+    icon: Wallet,
+  },
+  {
+    id: "benefit-clock",
+    text: "Fast payments to any system without commissions",
+    icon: Clock,
+  },
+  {
+    id: "benefit-globe",
+    text: "Global coverage worldwide",
+    icon: Globe,
+  },
+  {
+    id: "benefit-ads",
+    text: "Moderated ads",
+    icon: Ads,
+  },
+];
+
+export const webmasterCards = [
+  {
+    id: "protocol-integration",
+    title: "Protocol integration",
+    subtitle: "via XML/JSON and oRTB",
+    icon: Tag,
+  },
+  {
+    id: "support-24-7",
+    title: "24/7 support",
+    subtitle: "with a dedicated account manager",
+    icon: Support,
   },
 ];

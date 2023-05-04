@@ -55,6 +55,21 @@ export const fadeIn = (direction) => ({
   },
 });
 
+export const fadeInY = (direction) => ({
+  hidden: {
+    opacity: 0,
+    y: direction === "up" ? -50 : direction === "down" ? 50 : 0,
+  },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: custom * 0.15,
+    },
+  }),
+});
+
 export const cascade = () => ({
   hidden: (custom) => ({
     opacity: 0,

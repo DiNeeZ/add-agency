@@ -7,7 +7,7 @@ import SmallCard from "../UI/small-card/small-card";
 import { tematic, numsOfAdvantages, advantageCards } from "@/data";
 import { textAnimation, cascade } from "@/utils/motion";
 
-import styles from "./advantages.module.scss";
+import styles from "./advertiser.module.scss";
 
 const renderTematicItem = (item) => {
   const { id, label, icon: Icon } = item;
@@ -61,8 +61,8 @@ const renderCard = (card, index) => (
 const MotionTitle = motion(Title);
 const MotionSubtitle = motion(Subtitle);
 
-const Advantages = () => (
-  <section id="advantages" className={styles.advantages}>
+const Advertiser = () => (
+  <section id="adertiser" className={styles.advertiser}>
     <div className={styles.container}>
       <div className={styles.heading}>
         <MotionSubtitle custom={1} variants={textAnimation()}>
@@ -110,4 +110,4 @@ const Advantages = () => (
   </section>
 );
 
-export default Advantages;
+export default Advertiser;

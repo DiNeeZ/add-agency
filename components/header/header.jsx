@@ -8,14 +8,6 @@ import styles from "./header.module.scss";
 
 const Header = () => {
   const laguageList = ["Eng", "Rus"];
-  // const contactMethods = [
-  //   "Phone",
-  //   "Telegram",
-  //   "WhatsApp",
-  //   "Skype",
-  //   "E-mail",
-  //   "other",
-  // ];
 
   return (
     <header className={styles.header}>
@@ -25,16 +17,12 @@ const Header = () => {
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link
-                href="#advantages"
-                scroll={false}
-                className={styles.navLink}
-              >
+              <Link href="#adertiser" scroll={false} className={styles.navLink}>
                 To the Advertiser
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>
+              <Link href="#webmaster" scroll={false} className={styles.navLink}>
                 To the Webmaster
               </Link>
             </li>

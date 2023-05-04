@@ -4,7 +4,8 @@ import Header from "@/components/header/header";
 import Hero from "@/components/hero/hero";
 import Offer from "@/components/offer/offer";
 import Formats from "@/components/formats/formats";
-import Advantages from "@/components/advantages/advantages";
+import Advertiser from "@/components/advertiser/advertiser";
+import Webmaster from "@/components/webmaster/webmaster";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
         <Hero />
         <Offer />
         <Formats />
-        <Advantages />
+        <Advertiser />
+        <Webmaster />
       </main>
     </>
   );

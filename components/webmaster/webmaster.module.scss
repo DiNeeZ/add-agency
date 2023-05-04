@@ -1,0 +1,67 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.webmaster {
+  padding: 120px 0;
+  background: url("/images/decorations/webmaster-bubbles.png"), #dcebf0;
+  background-position: center center;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.benefits {
+  @include list-reset;
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 315px);
+  column-gap: 2.625rem;
+  row-gap: 2rem;
+}
+
+.iconWrapper {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.benefitText {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: $dark-grey-color;
+}
+
+.cards {
+  @include list-reset;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Title from "../UI/title/title";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import { formats } from "@/data";
-import { fadeIn } from "@/utils/motion";
+import { fadeInY } from "@/utils/motion";
 
 import "overlayscrollbars/overlayscrollbars.css";
 import styles from "./formats.module.scss";
@@ -35,7 +35,7 @@ const Formats = () => {
           options={{
             scrollbars: { autoHide: "never" },
           }}
-          className={`${styles.scrollbar} kakak`}
+          className={styles.scrollbar}
           defer
         >
           <ul className={styles.buttons}>
@@ -66,10 +66,14 @@ const Formats = () => {
           animate="visible"
           className={styles.showcase}
         >
-          <motion.div variants={fadeIn("left")} className={styles.imageWraper}>
+          <motion.div
+            custom={1}
+            variants={fadeInY("up")}
+            className={styles.imageWraper}
+          >
             <FormatImage className={styles.image} />
           </motion.div>
-          <motion.div variants={fadeIn("right")}>
+          <motion.div custom={2} variants={fadeInY("down")}>
             <h3 className={styles.formatTitle}>
               {formats[currentIndex].title}
             </h3>

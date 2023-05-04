@@ -1,12 +1,10 @@
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 
 import Title from "../UI/title/title";
 import Subtitle from "../UI/subtitle/subtitle";
 import Paragraph from "../UI/paragraph/paragraph";
 import Button from "../UI/button/button";
-
 import { textAnimation } from "@/utils/motion";
 
 import styles from "./hero.module.scss";
@@ -32,7 +30,7 @@ const Hero = () => {
               Major advertising network
             </MotionTitle>
 
-            <MotionSubtitle size="l" custom={2} variants={textAnimation()}>
+            <MotionSubtitle size="lg" custom={2} variants={textAnimation()}>
               To buy and sell traffic
             </MotionSubtitle>
           </div>
