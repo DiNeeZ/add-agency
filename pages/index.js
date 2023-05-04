@@ -6,6 +6,8 @@ import Offer from "@/components/offer/offer";
 import Formats from "@/components/formats/formats";
 import Advertiser from "@/components/advertiser/advertiser";
 import Webmaster from "@/components/webmaster/webmaster";
+import Footer from "@/components/footer/footer";
+import FAQ from "@/components/faq/faq";
 
 const Home = () => {
   return (
@@ -20,7 +22,9 @@ const Home = () => {
         <Formats />
         <Advertiser />
         <Webmaster />
+        <FAQ />
       </main>
+      <Footer />
     </>
   );
 };

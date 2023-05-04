@@ -1,0 +1,44 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.accordion {
+  @include list-reset;
+}
+
+// .section {
+
+// }
+
+.button {
+  @include btn-reset;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: $dark-grey-color;
+  border-top: 1px solid #e1def4;
+  outline: none;
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: $font-md;
+  line-height: 1.2;
+  color: currentColor;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.textWrapper {
+  width: 100%;
+}
+
+.text {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}

@@ -84,6 +84,14 @@
   text-shadow: -1px 0px 0px $purple-color, 1px 0px 0px $purple-color,
     0px -1px 0px $purple-color, 0px 1px 0px $purple-color;
   color: #e1def4;
+
+  @supports (-webkit-text-stroke: 1px $purple-color) {
+    & {
+      text-shadow: none;
+      -webkit-text-stroke: 1px $purple-color;
+      -webkit-text-fill-color: #e1def4;
+    }
+  }
 }
 
 .mills {

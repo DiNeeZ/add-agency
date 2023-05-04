@@ -62,7 +62,7 @@ const MotionTitle = motion(Title);
 const MotionSubtitle = motion(Subtitle);
 
 const Advertiser = () => (
-  <section id="adertiser" className={styles.advertiser}>
+  <section id="advertiser" className={styles.advertiser}>
     <div className={styles.container}>
       <div className={styles.heading}>
         <MotionSubtitle custom={1} variants={textAnimation()}>
