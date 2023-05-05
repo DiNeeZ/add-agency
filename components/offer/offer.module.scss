@@ -45,7 +45,7 @@
 .item {
   margin-right: 245px;
   position: relative;
-  max-width: 539px;
+  min-width: 539px;
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -53,18 +53,6 @@
   padding: 25px 40px;
   background-color: $white-color;
   border-radius: $border-radius-lg;
-
-  // &:first-child {
-  //   transform: translateX(-245px);
-  // }
-
-  // &:nth-child(2) {
-  //   transform: translateX(-190px);
-  // }
-
-  // &:nth-child(3) {
-  //   transform: translateX(-116px);
-  // }
 
   &::before {
     content: "\2726";

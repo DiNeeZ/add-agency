@@ -310,32 +310,43 @@ export const advertiserFAQ = [
 export const webmasterFAQ = [
   {
     id: "webmasterFAQ-1",
-    question: "",
-    answer: "",
+    question:
+      "What is the role of a webmaster in an advertising agency's website?",
+    answer:
+      "The webmaster is responsible for the development, maintenance, and optimization of the agency's website to ensure it is up-to-date, user-friendly, and aligned with the agency's branding and marketing objectives.",
   },
   {
     id: "webmasterFAQ-2",
-    question: "",
-    answer: "",
+    question:
+      "What technical skills are required for a webmaster in an advertising agency?",
+    answer:
+      "Webmasters in advertising agencies should have knowledge and experience in web development languages such as HTML, CSS, JavaScript, and PHP, as well as familiarity with content management systems (CMS) such as WordPress and Drupal.",
   },
   {
     id: "webmasterFAQ-3",
-    question: "",
-    answer: "",
+    question:
+      "How does a webmaster ensure the agency's website is optimized for search engines?",
+    answer:
+      "A webmaster can optimize the website's content, structure, and metadata for search engines, perform keyword research and analysis, and create a sitemap to help search engines crawl the website.",
   },
   {
     id: "webmasterFAQ-4",
-    question: "",
-    answer: "",
+    question:
+      "What are some best practices for web design in an advertising agency's website?",
+    answer:
+      "Webmasters should ensure the website is visually appealing, easy to navigate, and responsive across different devices. They should also prioritize page loading speed and incorporate clear calls to action throughout the site.",
   },
   {
     id: "webmasterFAQ-5",
-    question: "",
-    answer: "",
+    question: "How can a webmaster ensure the agency's website is secure?",
+    answer:
+      "Webmasters can implement security measures such as HTTPS encryption, two-factor authentication, regular backups, and software updates to protect the website from potential security breaches.",
   },
   {
     id: "webmasterFAQ-6",
-    question: "",
-    answer: "",
+    question:
+      "How does a webmaster track and analyze the performance of the agency's website?",
+    answer:
+      "Webmasters can use web analytics tools such as Google Analytics to track and analyze the website's traffic, user behavior, and other key performance indicators. They can then use this data to optimize the website's design, content, and marketing strategies to improve its performance and achieve the agency's goals.",
   },
 ];
