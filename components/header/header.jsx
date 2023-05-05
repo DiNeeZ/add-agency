@@ -17,13 +17,17 @@ const Header = () => {
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="#adertiser" scroll={false} className={styles.navLink}>
-                To the Advertiser
+              <Link
+                href="#advertiser"
+                scroll={false}
+                className={styles.navLink}
+              >
+                Advertiser
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="#webmaster" scroll={false} className={styles.navLink}>
-                To the Webmaster
+                Webmaster
               </Link>
             </li>
             <li className={styles.navItem}>
@@ -35,7 +39,7 @@ const Header = () => {
 
           <ul className={`${styles.navList} ${styles.colorLight}`}>
             <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>
+              <Link href="#faq" scroll={false} className={styles.navLink}>
                 FAQ
               </Link>
             </li>

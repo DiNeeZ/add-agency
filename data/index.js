@@ -269,65 +269,73 @@ export const webmasterCards = [
 export const advertiserFAQ = [
   {
     id: "advertiserFAQ-1",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "What services do you offer as an advertising agency?",
+    answer:
+      "As an advertising agency, we offer a wide range of services including but not limited to, market research, campaign planning, creative development, media buying, and performance analytics.",
   },
   {
     id: "advertiserFAQ-2",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "How do you charge for your services?",
+    answer:
+      "Our fees depend on the scope of the project, the services required, and the level of complexity involved. We typically charge either a flat fee or a percentage of the media spend for our services.",
   },
   {
     id: "advertiserFAQ-3",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "How long does it take to develop an advertising campaign?",
+    answer:
+      "The time it takes to develop an advertising campaign depends on the scope and complexity of the project. We work with clients to establish realistic timelines based on their goals and budget.",
   },
   {
     id: "advertiserFAQ-4",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question:
+      "How do you ensure that my advertising message is delivered to the right audience?",
+    answer:
+      "We use a combination of data analysis, targeting, and optimization to ensure that your advertising message reaches the right audience. We continually refine our targeting approach based on performance data and audience insights.",
   },
   {
     id: "advertiserFAQ-5",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question:
+      "How do you work with clients to develop their advertising strategy?",
+    answer:
+      "We work closely with clients to understand their business objectives, target audience, and competitive landscape. Based on this information, we develop a customized advertising strategy that aligns with their goals and budget.",
   },
   {
     id: "advertiserFAQ-6",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "What industries do you specialize in?",
+    answer:
+      "We have experience working with clients across various industries, including healthcare, retail, finance, technology, and more. We adapt our approach based on the specific needs of each client.",
   },
 ];
 
 export const webmasterFAQ = [
   {
     id: "webmasterFAQ-1",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
   {
     id: "webmasterFAQ-2",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
   {
     id: "webmasterFAQ-3",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
   {
     id: "webmasterFAQ-4",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
   {
     id: "webmasterFAQ-5",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
   {
     id: "webmasterFAQ-6",
-    title: "Где именно на сайте будет стоять реклама?",
-    text: "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    question: "",
+    answer: "",
   },
 ];

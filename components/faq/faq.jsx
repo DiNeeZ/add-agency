@@ -13,11 +13,11 @@ const FAQ = () => {
 
   const tabs = [
     {
-      label: "To the Advertiser",
+      label: "Advertiser",
       data: advertiserFAQ,
     },
     {
-      label: "To the Webmaster",
+      label: "Webmaster",
       data: webmasterFAQ,
     },
   ];
@@ -26,7 +26,7 @@ const FAQ = () => {
     setCurrentTabIndex(Number(event.target.dataset.tabIndex));
 
   return (
-    <section className={styles.faq}>
+    <section id="faq" className={styles.faq}>
       <div className={styles.container}>
         <div className={styles.content}>
           <Title>Frequently Asked Questions</Title>

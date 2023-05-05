@@ -48,12 +48,24 @@
   font-weight: 600;
   font-size: $font-md;
   line-height: 1.1;
+  border: 1px solid transparent;
   border-bottom-left-radius: $border-radius-md;
   border-bottom-right-radius: $border-radius-md;
-  transition: background-color 0.3s ease-in-out;
+  outline: none;
+  transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out;
 
   &:first-child {
     color: $purple-color;
+
+    &:focus-visible {
+      border: 1px solid $purple-color;
+    }
+
+    @include hover {
+      &:hover {
+        border: 1px solid $purple-color;
+      }
+    }
 
     &.active {
       background-color: rgba($purple-color, 0.2);
@@ -62,6 +74,16 @@
 
   &:last-child {
     color: $teal-color;
+
+    &:focus-visible {
+      border: 1px solid $teal-color;
+    }
+
+    @include hover {
+      &:hover {
+        border: 1px solid $teal-color;
+      }
+    }
 
     &.active {
       background-color: rgba($teal-color, 0.2);

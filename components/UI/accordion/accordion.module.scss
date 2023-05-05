@@ -5,10 +5,6 @@
   @include list-reset;
 }
 
-// .section {
-
-// }
-
 .button {
   @include btn-reset;
   width: 100%;
@@ -17,8 +13,29 @@
   justify-content: space-between;
   padding: 1rem 0;
   color: $dark-grey-color;
-  border-top: 1px solid #e1def4;
+  border-top: 1px solid rgba($light-grey-color, 0.2);
   outline: none;
+  transition: color 0.15s ease-in-out, border-top 0.15s ease-in-out;
+
+  @include hover {
+    &:hover {
+      color: $purple-color;
+      border-top: 1px solid rgba($light-grey-color, 0.4);
+
+      .iconWrapper {
+        background-color: rgba($purple-color, 0.15);
+      }
+    }
+  }
+
+  &:focus-visible {
+    color: $purple-color;
+    border-top: 1px solid rgba($light-grey-color, 0.4);
+
+    .iconWrapper {
+      background-color: rgba($purple-color, 0.15);
+    }
+  }
 }
 
 .title {
@@ -29,7 +46,20 @@
   color: currentColor;
 }
 
+.iconWrapper {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.15s ease-in-out;
+}
+
 .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   fill: currentColor;
 }
 
@@ -38,7 +68,12 @@
 }
 
 .text {
+  margin: 0;
   height: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.textInner {
+  padding: 1rem 0;
 }
