@@ -41,7 +41,7 @@ const Hero = () => {
             className={styles.text}
           >
             uniting webmasters, arbitrageurs, website and app owners,
-            media-bayers, advertisers and more
+            media-bayers, advertisers and more more
           </MotionParagraph>
 
           <MotionButton
