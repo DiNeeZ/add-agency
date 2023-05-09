@@ -5,18 +5,18 @@ import Chevron from "@/assets/images/icons/chevron.svg";
 import styles from "./dropdown.module.scss";
 import ChildrenBlur from "../children-blur/children-blur";
 
-const Dropdown = ({ options, label }) => {
-  const [selected, setSelected] = useState(label);
+const Dropdown = ({ options, selected, handleSelect }) => {
   const [open, setOpen] = useState(false);
   const controlButtonRef = useRef(null);
 
   const closeDropdown = (event) => {
+    event.preventDefault();
+
     if (
       !event.target.classList.contains(styles.dropdown) &&
       !event.target.classList.contains(styles.button)
     ) {
       setOpen(false);
-      console.log("Close");
     }
   };
 
@@ -30,13 +30,19 @@ const Dropdown = ({ options, label }) => {
     return () => document.removeEventListener("click", closeDropdown);
   }, [open]);
 
+  const handleMenuClick = (event) => {
+    event.preventDefault();
+    setOpen(!open);
+  };
+
   const selectItem = (event) => {
+    event.preventDefault();
     const selectedTextNode = event.target.childNodes[0].nodeValue;
     const selectedOptionIndex = options.findIndex(
       (option) => option === selectedTextNode
     );
 
-    setSelected(options[selectedOptionIndex]);
+    handleSelect(options[selectedOptionIndex]);
     controlButtonRef.current.focus();
     setOpen(!open);
   };
@@ -49,7 +55,7 @@ const Dropdown = ({ options, label }) => {
       <button
         ref={controlButtonRef}
         className={styles.button}
-        onClick={() => setOpen(!open)}
+        onClick={handleMenuClick}
         aria-expanded={open}
         aria-controls="dropwown-menu"
       >

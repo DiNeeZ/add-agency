@@ -8,6 +8,7 @@ import Advertiser from "@/components/advertiser/advertiser";
 import Webmaster from "@/components/webmaster/webmaster";
 import Footer from "@/components/footer/footer";
 import FAQ from "@/components/faq/faq";
+import Contacts from "@/components/contacts/contacts";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <Advertiser />
         <Webmaster />
         <FAQ />
+        <Contacts />
       </main>
       <Footer />
     </>

@@ -350,3 +350,36 @@ export const webmasterFAQ = [
       "Webmasters can use web analytics tools such as Google Analytics to track and analyze the website's traffic, user behavior, and other key performance indicators. They can then use this data to optimize the website's design, content, and marketing strategies to improve its performance and achieve the agency's goals.",
   },
 ];
+
+export const contactsInputOptions = [
+  {
+    type: "tel",
+    label: "Phone",
+    placeholder: "Phone",
+  },
+  {
+    type: "text",
+    label: "Telegram",
+    placeholder: "Telegram",
+  },
+  {
+    type: "text",
+    label: "WhatsApp",
+    placeholder: "WhatsApp",
+  },
+  {
+    type: "text",
+    label: "Skype",
+    placeholder: "Skype",
+  },
+  {
+    type: "email",
+    label: "E-mail",
+    placeholder: "E-mail",
+  },
+  {
+    type: "text",
+    label: "other",
+    placeholder: "other",
+  },
+];

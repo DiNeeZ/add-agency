@@ -1,0 +1,145 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.contacts {
+  margin-bottom: 120px;
+}
+
+.container {
+  @include container;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linksBlock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hiddenTitle {
+  @include visually-hidden;
+}
+
+.shaped {
+  width: 604px;
+  margin-bottom: 3.25rem;
+  padding: 107px 143px 85px 46px;
+  background-image: url(/images/decorations/contacts-shape.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.linksTitle {
+  margin: 0 0 2.5rem 0;
+  font-weight: 400;
+  font-size: 3.25rem;
+  color: $white-color;
+}
+
+.linksList {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba($white-color, 0.8);
+  font-weight: 600;
+  font-size: $font-md;
+  line-height: 1.2;
+  outline: none;
+  transition: color 0.15s ease-in-out;
+
+  .icon {
+    fill: currentColor;
+  }
+
+  .contactLinkText {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.75rem;
+      width: 100%;
+      height: 1px;
+      background-color: transparent;
+      transition: background-color 0.15s ease-in-out;
+    }
+  }
+
+  @include hover {
+    &:hover {
+      color: $white-color;
+    }
+  }
+
+  &:focus-visible {
+    color: $white-color;
+
+    .contactLinkText {
+      &:after {
+        background-color: rgba($white-color, 0.5);
+      }
+    }
+  }
+}
+
+.additional {
+  position: relative;
+  max-width: 315px;
+  margin-left: 112px;
+  line-height: 1.4;
+
+  &::after {
+    content: url(/images/decorations/elipse.svg);
+    position: absolute;
+    left: -2.5rem;
+    bottom: -2.5rem;
+  }
+}
+
+.formBlock {
+  position: relative;
+  // top: 204px;
+  // right: 0;
+  width: 746px;
+  margin-top: 204px;
+  padding: 4.5rem 3.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #eef0f6 100%);
+  box-shadow: 18px -30px 30px -8px rgba(0, 0, 0, 0.05);
+  border-radius: 34px;
+  z-index: 2;
+
+  &::after {
+    content: url(/images/decorations/paper-plane.svg);
+    position: absolute;
+    top: 38px;
+    right: 72px;
+  }
+}
+
+.formHeading {
+  margin-bottom: 2.5rem;
+}
+
+.formTitle {
+  margin: 0 0 0.5em 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: $teal-color;
+}
+
+.formSubtitle {
+  margin: 0;
+  font-size: 14px;
+}

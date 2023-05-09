@@ -1,0 +1,31 @@
+@import "@/styles/vars.scss";
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  padding: calc((18 / 16) * 1rem) 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $light-smoke-color;
+    transition: background-color 0.15s ease-in-out;
+  }
+
+  &:has(:focus-visible) {
+    &::after {
+      background-color: $teal-color;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  background: none;
+  outline: none;
+}
