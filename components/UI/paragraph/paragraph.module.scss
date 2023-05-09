@@ -1,7 +1,14 @@
 @import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
 
 .paragraph {
   margin: 0;
   line-height: 1.4;
   color: $grey-color;
+}
+
+@include mobile {
+  .paragraph {
+    font-size: 1rem;
+  }
 }

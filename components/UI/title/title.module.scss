@@ -1,8 +1,15 @@
 @import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
 
 .title {
   margin: 0;
   font-weight: 400;
   font-size: 3.25rem;
   color: $dark-grey-color;
+}
+
+@include mobile {
+  .title {
+    font-size: 2.5rem;
+  }
 }

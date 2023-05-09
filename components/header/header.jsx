@@ -15,40 +15,46 @@ const Header = () => {
         <Logo />
 
         <nav className={styles.navigation}>
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link
-                href="#advertiser"
-                scroll={false}
-                className={styles.navLink}
-              >
-                Advertiser
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="#webmaster" scroll={false} className={styles.navLink}>
-                Webmaster
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="#formats" scroll={false} className={styles.navLink}>
-                Formats
-              </Link>
-            </li>
-          </ul>
+          <div className={styles.linksGroup}>
+            <ul className={styles.navList}>
+              <li className={styles.navItem}>
+                <Link
+                  href="#advertiser"
+                  scroll={false}
+                  className={styles.navLink}
+                >
+                  Advertiser
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link
+                  href="#webmaster"
+                  scroll={false}
+                  className={styles.navLink}
+                >
+                  Webmaster
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link href="#formats" scroll={false} className={styles.navLink}>
+                  Formats
+                </Link>
+              </li>
+            </ul>
 
-          <ul className={`${styles.navList} ${styles.colorLight}`}>
-            <li className={styles.navItem}>
-              <Link href="#faq" scroll={false} className={styles.navLink}>
-                FAQ
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="#contacts" className={styles.navLink}>
-                Contacts
-              </Link>
-            </li>
-          </ul>
+            <ul className={`${styles.navList} ${styles.colorLight}`}>
+              <li className={styles.navItem}>
+                <Link href="#faq" scroll={false} className={styles.navLink}>
+                  FAQ
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link href="#contacts" className={styles.navLink}>
+                  Contacts
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           <ul className={`${styles.navList} ${styles.buttons}`}>
             <li className={styles.navItem}>

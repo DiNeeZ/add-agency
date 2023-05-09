@@ -46,6 +46,8 @@
 .container {
   @include container;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 55px;
 }
 
@@ -73,10 +75,35 @@
   gap: 1.5rem;
 }
 
+.image {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 @include for-2k-desktop {
   .heroBg {
     width: 51%;
     background-size: cover;
     background-position: left bottom;
+  }
+}
+
+@include mobile {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@include small-tablet {
+  .heroBg {
+    display: none;
+  }
+}
+
+@include tablet {
+  .container {
+    gap: 1rem;
   }
 }

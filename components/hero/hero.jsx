@@ -53,13 +53,15 @@ const Hero = () => {
           </MotionButton>
         </div>
 
-        <Image
-          src="/images/hero.png"
-          width={724}
-          height={467}
-          alt="adds on webpage"
-          className={styles.image}
-        />
+        <div>
+          <Image
+            src="/images/hero.png"
+            width={724}
+            height={467}
+            alt="adds on webpage"
+            className={styles.image}
+          />
+        </div>
       </div>
     </motion.section>
   );

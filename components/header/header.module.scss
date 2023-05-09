@@ -21,40 +21,28 @@
 }
 
 .navigation {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 7.3125rem;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.linksGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
 }
 
 .navList {
   @include list-reset;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 
   &.buttons {
     gap: 2rem;
-  }
-
-  &:first-child {
-    margin-right: 0.8125rem;
-  }
-
-  &:nth-child(2) {
-    color: $white-color;
-
-    a {
-      color: currentColor;
-
-      &:hover,
-      &:focus {
-        color: $white-color;
-
-        &:after {
-          background-color: $white-color;
-        }
-      }
-    }
   }
 }
 
@@ -97,4 +85,48 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+@include mobile {
+  .navigation {
+    display: none;
+  }
+}
+
+@include tablet {
+  .navigation {
+    display: none;
+  }
+}
+
+@include for-big-desktop {
+  .navigation {
+    width: auto;
+    gap: 7.3125rem;
+  }
+
+  .linksGroup {
+    gap: 7.3125rem;
+  }
+
+  .navList {
+    gap: 2rem;
+
+    &:nth-child(2) {
+      color: $white-color;
+
+      a {
+        color: currentColor;
+
+        &:hover,
+        &:focus {
+          color: $white-color;
+
+          &:after {
+            background-color: $white-color;
+          }
+        }
+      }
+    }
+  }
 }
