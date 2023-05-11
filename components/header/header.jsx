@@ -1,17 +1,28 @@
+import { useState } from "react";
 import Link from "next/link";
 
 import Logo from "../UI/logo/logo";
 import LanguageSelector from "../UI/language-switcher/language-switcher";
 import Button from "../UI/button/button";
+import MobileMenuBtn from "../UI/mobile-menu-btn/mobile-menu-btn";
+import MobileLoginBtn from "../UI/mobile-login-btn/mobile-login-btn";
 
 import styles from "./header.module.scss";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const laguageList = ["Eng", "Rus"];
+
+  const handleMobileMenuClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
+        <MobileMenuBtn
+          isOpen={isMobileMenuOpen}
+          handleClick={handleMobileMenuClick}
+        />
+
         <Logo />
 
         <nav className={styles.navigation}>
@@ -70,6 +81,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <MobileLoginBtn />
       </div>
     </header>
   );

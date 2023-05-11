@@ -11,13 +11,13 @@ export const stairsAnimation = {
   }),
 };
 
-export const textAnimation = (direction = "left") => ({
+export const textAnimation = (direction = "left", step = 0) => ({
   hidden: {
     x: direction === "right" ? 100 : -100,
     opacity: 0,
   },
   visible: (custom) => ({
-    x: 0,
+    x: 0 + step * custom,
     opacity: 1,
     transition: {
       delay: custom * 0.25,

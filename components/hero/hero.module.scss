@@ -89,21 +89,64 @@
   }
 }
 
-@include mobile {
+@include tablet {
+  .hero {
+    padding-top: 140px;
+  }
+
+  .heroBg {
+    display: none;
+  }
+
   .container {
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
 @include small-tablet {
-  .heroBg {
-    display: none;
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading {
+    align-items: center;
+  }
+
+  .imageWrapper {
+    padding: 0 50px;
   }
 }
 
-@include tablet {
-  .container {
+@include mobile {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .content {
+    align-items: flex-start;
+    text-align: left;
+
+    button {
+      max-width: 100%;
+    }
+  }
+
+  .content {
+    gap: 2rem;
+  }
+
+  .heading {
+    align-items: flex-start;
     gap: 1rem;
+  }
+
+  .imageWrapper {
+    padding: 0;
   }
 }

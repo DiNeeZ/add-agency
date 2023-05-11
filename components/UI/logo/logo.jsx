@@ -18,7 +18,9 @@ const Logo = ({ color }) => {
 
   return (
     <Link href="/" className={styles.logo}>
-      <LogoIcon />
+      <div>
+        <LogoIcon />
+      </div>
       <LogoText />
     </Link>
   );

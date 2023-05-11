@@ -53,7 +53,7 @@ const Hero = () => {
           </MotionButton>
         </div>
 
-        <div>
+        <div className={styles.imageWrapper}>
           <Image
             src="/images/hero.png"
             width={724}

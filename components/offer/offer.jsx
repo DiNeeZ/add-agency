@@ -1,15 +1,18 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import Title from "../UI/title/title";
+import useMedia from "@/hooks/useMedia";
+import { textAnimation } from "@/utils/motion";
 
 import { offers } from "@/data";
-import { stairsAnimation } from "@/utils/motion";
 import styles from "./offer.module.scss";
-import Image from "next/image";
 
 const Offer = () => {
+  const isSmallTablet = useMedia("(max-width: 768px)");
+
   return (
-    <motion.section className={styles.offer}>
+    <section className={styles.offer}>
       <div className={styles.container}>
         <Image
           className={styles.image}
@@ -18,7 +21,7 @@ const Offer = () => {
           height={667}
           alt="phone with adds"
         />
-        <div className={styles.content}>
+        <motion.div className={styles.content}>
           <Title>We Offer</Title>
           <ul className={styles.list}>
             {offers.map((offer, index) => {
@@ -28,9 +31,9 @@ const Offer = () => {
                   key={`offer-${label}`}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: !isSmallTablet }}
                   custom={index}
-                  variants={stairsAnimation}
+                  variants={textAnimation("left", isSmallTablet ? 0 : 50)}
                   className={styles.item}
                 >
                   <div className={styles.itemInfo}>
@@ -42,9 +45,9 @@ const Offer = () => {
               );
             })}
           </ul>
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -7,8 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   background-color: transparent;
   z-index: 2;
 }
@@ -87,13 +86,49 @@
   gap: 1rem;
 }
 
-@include mobile {
+@include tablet {
+  .header {
+    padding: 35px 0;
+  }
+
+  .navigation {
+    gap: initial;
+  }
+
+  .linksGroup,
+  .navList {
+    gap: 0.5rem;
+  }
+
+  .navList {
+    align-items: flex-start;
+
+    &.buttons {
+      gap: 1rem;
+    }
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    gap: 0.25em;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+@include small-tablet {
   .navigation {
     display: none;
   }
 }
 
-@include tablet {
+@include mobile {
+  .header {
+    padding: 20px 0;
+  }
+
   .navigation {
     display: none;
   }

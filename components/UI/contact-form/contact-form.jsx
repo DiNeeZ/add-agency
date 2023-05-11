@@ -24,7 +24,6 @@ const ContactForm = ({}) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [selected, setSelected] = useState(initSelected);
   const { name, contact } = formFields;
-  console.log(formFields);
 
   const handleSelect = (option) => {
     const selectedOption = contactsInputOptions.find(

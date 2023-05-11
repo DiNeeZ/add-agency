@@ -88,3 +88,56 @@
 .icon {
   height: 81px;
 }
+
+@include tablet {
+  .container {
+    flex-direction: column-reverse;
+    padding-left: 30px;
+  }
+
+  .item {
+    min-width: initial;
+  }
+}
+
+@include small-tablet {
+  .container {
+    padding-left: 15px;
+  }
+
+  .item {
+    margin-right: 0;
+    // transform: translate(0, 0) !important;
+
+    &::before {
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@include mobile {
+  .offer {
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .item {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 25px 30px 30px 30px;
+  }
+
+  .itemTitle {
+    font-size: 1.25rem;
+  }
+
+  .itemInfo {
+    text-align: center;
+  }
+}
