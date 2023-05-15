@@ -16,15 +16,19 @@ export const textAnimation = (direction = "left", step = 0) => ({
     x: direction === "right" ? 100 : -100,
     opacity: 0,
   },
-  visible: (custom) => ({
-    x: 0 + step * custom,
-    opacity: 1,
-    transition: {
-      delay: custom * 0.25,
-      duration: 0.5,
-      type: "tween",
-    },
-  }),
+  visible: (custom) => {
+    custom = typeof custom === "undefined" ? 0 : custom;
+
+    return {
+      x: 0 + step * custom,
+      opacity: 1,
+      transition: {
+        delay: custom * 0.25,
+        duration: 0.5,
+        type: "tween",
+      },
+    };
+  },
 });
 
 export const zoomIn = (duration) => ({

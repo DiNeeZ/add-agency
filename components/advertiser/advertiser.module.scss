@@ -22,12 +22,9 @@
 .columns {
   display: flex;
   align-items: flex-start;
-  gap: 110px;
+  flex-direction: column;
+  gap: 2rem;
   margin-bottom: 3.2rem;
-}
-
-.only {
-  max-width: 290px;
 }
 
 .title {
@@ -40,6 +37,10 @@
 
 .tematicList {
   @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 2.5rem;
+  row-gap: 1rem;
 }
 
 .tematicItem {
@@ -104,6 +105,7 @@
   font-weight: 600;
   line-height: 1.2;
   color: $dark-grey-color;
+  white-space: nowrap;
 }
 
 .listCards {
@@ -118,4 +120,67 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+@include for-big-desktop {
+  .tematicList {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  .columns {
+    flex-direction: row;
+    gap: 110px;
+  }
+
+  .only {
+    max-width: 290px;
+  }
+}
+
+@include tablet {
+  .double {
+    width: 100%;
+  }
+
+  .listCards {
+    flex: 0 0 auto;
+  }
+}
+
+@include small-tablet {
+  .columns {
+    gap: 3.5rem;
+  }
+  .double {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+}
+
+@include mobile {
+  .double {
+    align-items: stretch;
+  }
+
+  .numsList {
+    li {
+      text-align: center;
+    }
+  }
+
+  .bottom {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      text-align: center !important;
+
+      br {
+        display: none;
+      }
+    }
+  }
 }
