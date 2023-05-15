@@ -71,7 +71,29 @@ const Formats = () => {
             variants={fadeInY("up")}
             className={styles.imageWraper}
           >
-            <FormatImage className={styles.image} />
+            <h3 className={`${styles.formatTitle} ${styles.mobile}`}>
+              {formats[currentIndex].title}
+            </h3>
+            <div className={styles.image}>
+              <FormatImage className={styles.svg} />
+              <div className={`${styles.descrFooter} ${styles.mobile}`}>
+                <p className={styles.details}>
+                  <span className={styles.detailsLabel}>Cost per click</span>
+                  <span className={styles.detailsValue}>
+                    from {formats[currentIndex].costPerClick}$ CPM
+                  </span>
+                </p>
+                <p className={styles.details}>
+                  <span className={styles.detailsLabel}>Daily volume</span>
+                  <span className={styles.detailsValue}>
+                    more than {formats[currentIndex].dailyVolume} views
+                  </span>
+                </p>
+              </div>
+            </div>
+            <p className={`${styles.descr} ${styles.mobile}`}>
+              {formats[currentIndex].descr}
+            </p>
           </motion.div>
           <motion.div custom={2} variants={fadeInY("down")}>
             <h3 className={styles.formatTitle}>

@@ -46,6 +46,7 @@
 
 .scrollbar {
   position: relative;
+  min-width: 320px;
   max-height: 420px;
   overflow-y: scroll;
 
@@ -157,6 +158,13 @@
   }
 }
 
+.formatTitle,
+.descr {
+  &.mobile {
+    display: none;
+  }
+}
+
 .formatTitle {
   margin: 0 0 2rem 0;
   font-weight: 600;
@@ -174,6 +182,11 @@
 .descrFooter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  &.mobile {
+    display: none;
+  }
 }
 
 .details {
@@ -194,4 +207,100 @@
   font-size: $font-sm;
   line-height: 1.4;
   color: $dark-grey-color;
+}
+
+@include tablet {
+  .showcase {
+    grid-template-columns: auto;
+    align-items: center;
+  }
+
+  .formatTitle,
+  .descr {
+    display: none;
+    &.mobile {
+      display: block;
+    }
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .descrFooter {
+    display: none;
+
+    &.mobile {
+      display: grid;
+      min-width: 120px;
+    }
+  }
+
+  .image {
+    margin-bottom: 1.5rem;
+  }
+
+  .descrFooter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include small-tablet {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+
+    h2 {
+      grid-column: auto;
+    }
+  }
+
+  .subtitle {
+    grid-column: auto;
+    max-width: 200px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .scrollbar {
+    position: relative;
+    overflow-x: scroll;
+
+    &::after {
+      width: 1.25rem;
+      height: 100%;
+      right: -0.25rem;
+      background: linear-gradient(90deg, transparent, $light-smoke-color);
+    }
+  }
+
+  .buttons {
+    grid-column: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .button {
+    margin-bottom: 1rem;
+    flex: 1 0 128px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: calc((14 / 16) * 1rem);
+  }
+
+  .buttonTitle {
+    margin: 0;
+    text-align: center;
+  }
+
+  .showcase {
+    grid-column: auto;
+    gap: 0;
+  }
+
+  .descr {
+    margin: 0;
+  }
 }

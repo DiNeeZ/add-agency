@@ -12,7 +12,7 @@ const useMedia = (mediaQueryString) => {
   }, [mediaQueryString]);
 
   if (matches === null) return;
-  console.log(matches);
+
   return matches;
 };
 
