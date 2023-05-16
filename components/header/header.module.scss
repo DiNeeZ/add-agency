@@ -106,31 +106,15 @@
     &.buttons {
       gap: 1rem;
     }
-  }
 
-  .btnGroup {
-    flex-direction: column;
-    gap: 0.25em;
+    li:nth-child(2) > div {
+      flex-direction: column;
+      gap: 0.25em;
 
-    & > * {
-      width: 100%;
+      & > * {
+        width: 100%;
+      }
     }
-  }
-}
-
-@include small-tablet {
-  .navigation {
-    display: none;
-  }
-}
-
-@include mobile {
-  .header {
-    padding: 20px 0;
-  }
-
-  .navigation {
-    display: none;
   }
 }
 
@@ -163,5 +147,21 @@
         }
       }
     }
+  }
+}
+
+@include small-tablet {
+  .navigation {
+    display: none;
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 20px 0;
+  }
+
+  .navigation {
+    display: none;
   }
 }

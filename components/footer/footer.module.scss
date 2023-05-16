@@ -197,6 +197,18 @@
 }
 
 @include mobile {
+  .navigation {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .contactLinkText {
+    font-size: $font-sm;
+  }
+
   .bottom {
     flex-direction: column;
     align-items: baseline;

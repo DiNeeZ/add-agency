@@ -107,6 +107,10 @@
 }
 
 @include mobile {
+  .container {
+    padding-right: 15px;
+  }
+
   .buttons {
     width: 100%;
     display: flex;

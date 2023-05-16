@@ -1,0 +1,44 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.mobileMenu {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  min-height: 100vh;
+
+  background-color: $white-color;
+
+  footer {
+    border-radius: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.navigation {
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
+.navItem {
+  & > * {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.navList {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  a {
+    font-size: 1rem;
+  }
+}

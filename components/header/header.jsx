@@ -6,8 +6,11 @@ import LanguageSelector from "../UI/language-switcher/language-switcher";
 import Button from "../UI/button/button";
 import MobileMenuBtn from "../UI/mobile-menu-btn/mobile-menu-btn";
 import MobileLoginBtn from "../UI/mobile-login-btn/mobile-login-btn";
+import MobileMenu from "../mobile-menu/mobile-menu";
+import NavLink from "../UI/navlink/navlink";
 
 import styles from "./header.module.scss";
+import AuthBtns from "../UI/auth-btns/auth-btns";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +20,10 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        handleClose={handleMobileMenuClick}
+      />
       <div className={styles.container}>
         <MobileMenuBtn
           isOpen={isMobileMenuOpen}
@@ -29,40 +36,22 @@ const Header = () => {
           <div className={styles.linksGroup}>
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <Link
-                  href="#advertiser"
-                  scroll={false}
-                  className={styles.navLink}
-                >
-                  Advertiser
-                </Link>
+                <NavLink href="advertiser">Advertiser</NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link
-                  href="#webmaster"
-                  scroll={false}
-                  className={styles.navLink}
-                >
-                  Webmaster
-                </Link>
+                <NavLink href="webmaster">Webmaster</NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link href="#formats" scroll={false} className={styles.navLink}>
-                  Formats
-                </Link>
+                <NavLink href="formats">Formats</NavLink>
               </li>
             </ul>
 
             <ul className={`${styles.navList} ${styles.colorLight}`}>
               <li className={styles.navItem}>
-                <Link href="#faq" scroll={false} className={styles.navLink}>
-                  FAQ
-                </Link>
+                <NavLink href="faq">FAQ</NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link href="#contacts" className={styles.navLink}>
-                  Contacts
-                </Link>
+                <NavLink href="contacts">Contacts</NavLink>
               </li>
             </ul>
           </div>
@@ -72,12 +61,7 @@ const Header = () => {
               <LanguageSelector languages={laguageList} />
             </li>
             <li className={styles.navItem}>
-              <div className={styles.btnGroup}>
-                <Button variant="secondary">Log In</Button>
-                <Button variant="secondary" theme="teal">
-                  Registration
-                </Button>
-              </div>
+              <AuthBtns colors={"light"} />
             </li>
           </ul>
         </nav>
