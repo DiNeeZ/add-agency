@@ -158,11 +158,18 @@
     flex-direction: column;
     gap: 3.5rem;
   }
+  .tematicList {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 @include mobile {
   .double {
     align-items: stretch;
+  }
+
+  .tematicList {
+    grid-template-columns: repeat(1, auto);
   }
 
   .numsList {

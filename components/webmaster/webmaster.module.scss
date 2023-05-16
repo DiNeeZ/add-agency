@@ -22,6 +22,7 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   gap: 4rem;
 }
@@ -64,4 +65,56 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+@include for-big-desktop {
+  .content {
+    flex-direction: row;
+  }
+}
+
+@include small-tablet {
+  .benefits {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+@include mobile {
+  .content {
+    align-items: stretch;
+  }
+
+  .benefits {
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .benefit {
+    &:not(:first-child) {
+      margin-top: -40px;
+    }
+
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+
+  .benefitText {
+    max-width: 160px;
+  }
+
+  .bottom {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      text-align: center !important;
+
+      br {
+        display: none;
+      }
+    }
+  }
 }
