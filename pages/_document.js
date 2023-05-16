@@ -32,6 +32,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#da532c" />
       </Head>
       <body>
+        <div id="modal" />
         <Main />
         <NextScript />
       </body>
