@@ -182,3 +182,24 @@
     }
   }
 }
+
+@include tablet {
+  .contactList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@include small-tablet {
+  .content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+@include mobile {
+  .bottom {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2.5rem;
+  }
+}
