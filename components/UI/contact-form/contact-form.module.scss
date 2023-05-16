@@ -2,8 +2,14 @@
 @import "@/styles/mixins.scss";
 
 .contactForm {
-  div:has(input):first-child {
+  max-width: 600px;
+
+  div:has(input):not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  div:has(textarea) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -11,7 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 153px;
 }
 
 .agreement {
@@ -59,4 +64,28 @@
 .inputWrapper {
   display: flex;
   gap: 1.5rem;
+}
+
+@include small-tablet {
+  .inputWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formFooter {
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .agreement {
+    max-width: none;
+  }
+}
+
+@include mobile {
+  .formFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

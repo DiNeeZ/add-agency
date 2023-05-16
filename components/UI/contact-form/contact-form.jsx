@@ -7,6 +7,7 @@ import Dropdown from "../dropdown/dropdown";
 import { contactsInputOptions } from "@/data";
 
 import styles from "./contact-form.module.scss";
+import Textarea from "../textarea/textarea";
 
 const defaultFormFields = {
   name: "",
@@ -73,6 +74,7 @@ const ContactForm = ({}) => {
           handleChange={handleChange}
         />
       </div>
+      <Textarea placeholder="Message" />
 
       <div className={styles.formFooter}>
         <Button

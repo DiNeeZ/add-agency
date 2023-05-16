@@ -10,13 +10,12 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
 }
 
 .linksBlock {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .hiddenTitle {
@@ -97,7 +96,6 @@
 .additional {
   position: relative;
   max-width: 315px;
-  margin-left: 112px;
   line-height: 1.4;
 
   &::after {
@@ -110,10 +108,6 @@
 
 .formBlock {
   position: relative;
-  // top: 204px;
-  // right: 0;
-  width: 746px;
-  margin-top: 204px;
   padding: 4.5rem 3.5rem;
   background: linear-gradient(180deg, #ffffff 0%, #eef0f6 100%);
   box-shadow: 18px -30px 30px -8px rgba(0, 0, 0, 0.05);
@@ -142,4 +136,68 @@
 .formSubtitle {
   margin: 0;
   font-size: 14px;
+}
+
+@include for-big-desktop {
+  .container {
+    flex-direction: row;
+  }
+
+  .linksBlock {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  .formBlock {
+    width: 746px;
+    margin-top: 204px;
+  }
+}
+
+@include tablet {
+  .linksBlock {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .shaped {
+    margin: 0;
+  }
+
+  .additional {
+    align-self: flex-end;
+  }
+}
+
+@include small-tablet {
+  .shaped {
+    max-width: 540px;
+  }
+}
+
+@include mobile {
+  .contacts {
+    position: relative;
+    background-image: url(/images/decorations/mobile-contacts-shape-1.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 490px;
+      left: -290px;
+      display: block;
+      width: 399px;
+      height: 486px;
+      background-image: url(/images/decorations/mobile-contacts-shape-2.svg);
+    }
+  }
+
+  .shaped {
+    background: none;
+  }
 }

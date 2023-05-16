@@ -92,13 +92,17 @@
 }
 
 .imageWrapper {
-  display: block;
   flex: 1 0 calc(50% - 2.9rem);
 }
 
 @include tablet {
+  .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .imageWrapper {
-    display: none;
+    align-self: flex-end;
   }
 }
 
