@@ -6,7 +6,9 @@
   inset: 0;
   width: 100vw;
   min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: $white-color;
 
   footer {

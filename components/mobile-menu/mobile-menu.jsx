@@ -8,15 +8,12 @@ import NavLink from "../UI/navlink/navlink";
 import AuthBtns from "../UI/auth-btns/auth-btns";
 
 import styles from "./mobile-menu.module.scss";
-import Button from "../UI/button/button";
 
 const MobileMenu = ({ isOpen, handleClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.toggle("dis-scroll");
-    }
-
-    return () => document.body.classList.remove("dis-scroll");
+    isOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
   }, [isOpen]);
 
   return (
