@@ -11,17 +11,17 @@ const Logo = ({ color }) => {
   if (color === "white")
     return (
       <Link href="/" className={styles.logo}>
-        <LogoIconWhite />
-        <LogoTextWhite />
+        <LogoIconWhite className={styles.icon} />
+        <LogoTextWhite className={styles.text} />
       </Link>
     );
 
   return (
     <Link href="/" className={styles.logo}>
       <div>
-        <LogoIcon />
+        <LogoIcon className={styles.icon} />
       </div>
-      <LogoText />
+      <LogoText className={styles.text} />
     </Link>
   );
 };

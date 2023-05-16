@@ -1,9 +1,8 @@
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import Logo from "../UI/logo/logo";
 import LanguageSelector from "../UI/language-switcher/language-switcher";
-import Button from "../UI/button/button";
 import MobileMenuBtn from "../UI/mobile-menu-btn/mobile-menu-btn";
 import MobileLoginBtn from "../UI/mobile-login-btn/mobile-login-btn";
 import MobileMenu from "../mobile-menu/mobile-menu";
@@ -14,12 +13,35 @@ import AuthBtns from "../UI/auth-btns/auth-btns";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
   const laguageList = ["Eng", "Rus"];
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    const screenHeight = window.innerHeight;
+
+    if (currentScrollPos > screenHeight / 2) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   const handleMobileMenuClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className={styles.header}>
+    <motion.header
+      key={isFixed}
+      initial={{ y: isFixed ? -100 : 0, opacity: isFixed ? 0 : 1 }}
+      animate={{ y: 0, opacity: 1, transition: { duration: 0.3 } }}
+      className={isFixed ? `${styles.header} ${styles.fixed}` : styles.header}
+    >
       <MobileMenu
         isOpen={isMobileMenuOpen}
         handleClose={handleMobileMenuClick}
@@ -61,13 +83,13 @@ const Header = () => {
               <LanguageSelector languages={laguageList} />
             </li>
             <li className={styles.navItem}>
-              <AuthBtns colors={"light"} />
+              <AuthBtns colors={isFixed ? "" : "light"} />
             </li>
           </ul>
         </nav>
         <MobileLoginBtn />
       </div>
-    </header>
+    </motion.header>
   );
 };
 
