@@ -1,3 +1,4 @@
+import Head from "next/head";
 import localFont from "next/font/local";
 
 import "normalize.css/normalize.css";
@@ -75,6 +76,9 @@ const gilroy = localFont({
 
 const App = ({ Component, pageProps }) => (
   <>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     <style jsx global>{`
       html {
         font-family: ${gilroy.style.fontFamily};

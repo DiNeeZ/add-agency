@@ -14,7 +14,7 @@
 }
 
 .content {
-  flex: 1 0 705px;
+  flex: 1 0 calc(50% - 2.9rem);
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -88,5 +88,28 @@
     &.active {
       background-color: rgba($teal-color, 0.2);
     }
+  }
+}
+
+.imageWrapper {
+  display: block;
+  flex: 1 0 calc(50% - 2.9rem);
+}
+
+@include tablet {
+  .imageWrapper {
+    display: none;
+  }
+}
+
+@include mobile {
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button {
+    padding: 1rem 1.5rem;
   }
 }

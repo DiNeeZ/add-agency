@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 0;
   color: $dark-grey-color;
   border-top: 1px solid rgba($light-grey-color, 0.2);
@@ -51,6 +52,7 @@
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: transparent;
   transition: background-color 0.15s ease-in-out;
