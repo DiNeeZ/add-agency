@@ -3,17 +3,21 @@ import { motion } from "framer-motion";
 
 import Logo from "../UI/logo/logo";
 import LanguageSelector from "../UI/language-switcher/language-switcher";
-import MobileMenuBtn from "../UI/mobile-menu-btn/mobile-menu-btn";
-import MobileLoginBtn from "../UI/mobile-login-btn/mobile-login-btn";
 import MobileMenu from "../mobile-menu/mobile-menu";
 import NavLink from "../UI/navlink/navlink";
+import AuthBtns from "../UI/auth-btns/auth-btns";
+import SmallButton from "../UI/small-button/small-button";
+import MobileMenuIcon from "@/assets/images/icons/mobile-menu.svg";
+import MobileLoginIcon from "@/assets/images/icons/mobile-login.svg";
+
+import useMedia from "@/hooks/useMedia.js";
 
 import styles from "./header.module.scss";
-import AuthBtns from "../UI/auth-btns/auth-btns";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
+  const isSmallTablet = useMedia("(max-width: 768px)");
   const laguageList = ["Eng", "Rus"];
 
   const handleScroll = () => {
@@ -47,11 +51,14 @@ const Header = () => {
         handleClose={handleMobileMenuClick}
       />
       <div className={styles.container}>
-        <MobileMenuBtn
-          isOpen={isMobileMenuOpen}
-          handleClick={handleMobileMenuClick}
-        />
-
+        {isSmallTablet && (
+          <SmallButton
+            onClick={handleMobileMenuClick}
+            aria-label="Open mobile menu"
+          >
+            <MobileMenuIcon />
+          </SmallButton>
+        )}
         <Logo />
 
         <nav className={styles.navigation}>
@@ -87,7 +94,11 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <MobileLoginBtn />
+        {isSmallTablet && (
+          <SmallButton theme="teal" aria-label="Log in">
+            <MobileLoginIcon />
+          </SmallButton>
+        )}
       </div>
     </motion.header>
   );

@@ -6,6 +6,19 @@
   font-weight: 400;
   font-size: 3.25rem;
   color: $dark-grey-color;
+
+  &.purple {
+    color: $purple-color;
+  }
+
+  &.teal {
+    color: $teal-color;
+  }
+
+  &.md {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }
 
 @include mobile {

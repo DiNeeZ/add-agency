@@ -1,13 +1,8 @@
 import Button from "../button/button";
-import usePortal from "@/hooks/usePortal";
 
 import styles from "./auth-btns.module.scss";
 
 const AuthBtns = ({ colors }) => {
-  const Portal = usePortal("modal");
-
-  console.log(Portal);
-
   return (
     <div className={styles.btnGroup}>
       {colors === "light" ? (
@@ -18,10 +13,10 @@ const AuthBtns = ({ colors }) => {
           </Button>
         </>
       ) : (
-        <Portal>
+        <>
           <Button>Log In</Button>
           <Button theme="teal">Registration</Button>
-        </Portal>
+        </>
       )}
     </div>
   );

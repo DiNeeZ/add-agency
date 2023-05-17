@@ -1,0 +1,25 @@
+@import "@/styles/vars.scss";
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($light-grey-color, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.contentWrapper {
+  position: relative;
+}
+
+.content {
+  background-color: $white-color;
+  color: $purple-color;
+  border-radius: 34px;
+  box-shadow: 18px 30px 30px -8px rgba($black-color, 0.15);
+}

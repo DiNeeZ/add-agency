@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -5,6 +6,9 @@ import Title from "../UI/title/title";
 import Subtitle from "../UI/subtitle/subtitle";
 import Paragraph from "../UI/paragraph/paragraph";
 import Button from "../UI/button/button";
+import Modal from "../UI/modal/modal";
+import RegisterForm from "../UI/register-form/register-form";
+
 import { textAnimation } from "@/utils/motion";
 
 import styles from "./hero.module.scss";
@@ -15,6 +19,8 @@ const MotionParagraph = motion(Paragraph);
 const MotionButton = motion(Button);
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.section
       initial="hidden"
@@ -48,10 +54,15 @@ const Hero = () => {
             variants={textAnimation()}
             custom={4}
             className={styles.button}
+            handleClick={() => setIsOpen(!isOpen)}
           >
             Register
           </MotionButton>
         </div>
+
+        <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+          <RegisterForm handleClose={() => setIsOpen(false)} />
+        </Modal>
 
         <div className={styles.imageWrapper}>
           <Image

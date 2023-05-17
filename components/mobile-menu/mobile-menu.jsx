@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Footer from "../footer/footer";
 import Title from "../UI/title/title";
-import MobileMenuBtn from "../UI/mobile-menu-btn/mobile-menu-btn";
+import SmallButton from "../UI/small-button/small-button";
 import NavLink from "../UI/navlink/navlink";
 import AuthBtns from "../UI/auth-btns/auth-btns";
+import CloseIcon from "@/assets/images/icons/close.svg";
 
 import styles from "./mobile-menu.module.scss";
 
@@ -27,7 +28,9 @@ const MobileMenu = ({ isOpen, handleClose }) => {
         >
           <header className={styles.header}>
             <Title>Menu</Title>
-            <MobileMenuBtn handleClick={handleClose} close />
+            <SmallButton onClick={handleClose} aria-label="Close mobile menu">
+              <CloseIcon />
+            </SmallButton>
           </header>
           <nav className={styles.navigation}>
             <div className={styles.linksGroup}>

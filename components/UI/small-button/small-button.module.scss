@@ -1,0 +1,39 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.button {
+  @include btn-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 0.75rem;
+  background-color: $purple-color;
+  outline: none;
+  transition: background-color 0.15s ease-in-out;
+
+  &.teal {
+    background-color: $teal-color;
+
+    &:focus-visible {
+      background-color: lighten($teal-color, 10);
+    }
+
+    @include hover {
+      &:hover {
+        background-color: lighten($teal-color, 10);
+      }
+    }
+  }
+
+  &:focus-visible {
+    background-color: lighten($purple-color, 10);
+  }
+
+  @include hover {
+    &:hover {
+      background-color: lighten($purple-color, 10);
+    }
+  }
+}
