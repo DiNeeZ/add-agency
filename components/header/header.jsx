@@ -8,7 +8,6 @@ import NavLink from "../UI/navlink/navlink";
 import AuthBtns from "../UI/auth-btns/auth-btns";
 import SmallButton from "../UI/small-button/small-button";
 import MobileMenuIcon from "@/assets/images/icons/mobile-menu.svg";
-import MobileLoginIcon from "@/assets/images/icons/mobile-login.svg";
 
 import useMedia from "@/hooks/useMedia.js";
 
@@ -94,11 +93,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        {isSmallTablet && (
-          <SmallButton theme="teal" aria-label="Log in">
-            <MobileLoginIcon />
-          </SmallButton>
-        )}
       </div>
     </motion.header>
   );

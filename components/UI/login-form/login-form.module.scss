@@ -1,0 +1,36 @@
+@import "@/styles/vars.scss";
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  padding: 80px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.redirect {
+  font-weight: 500;
+  color: $grey-color;
+
+  button {
+    @include btn-reset;
+    outline: none;
+    font-weight: 500;
+    color: $purple-color;
+  }
+}
+
+.form {
+  min-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@include small-tablet {
+  .form {
+    min-width: 0;
+    width: 100%;
+  }
+}

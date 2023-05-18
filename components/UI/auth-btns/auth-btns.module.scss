@@ -1,5 +1,26 @@
+@import "@/styles/mixins.scss";
+
 .btnGroup {
   display: flex;
-  align-items: center;
   gap: 1rem;
+}
+
+.loginMobile {
+  display: none;
+}
+
+@include tablet {
+  .btnGroup {
+    flex-direction: column;
+  }
+}
+
+@include small-tablet {
+  .btnGroup {
+    display: none;
+  }
+
+  .loginMobile {
+    display: block;
+  }
 }

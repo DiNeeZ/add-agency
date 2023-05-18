@@ -13,6 +13,7 @@ const defaultFormFields = {
   name: "",
   contact: "",
   method: "",
+  message: "",
 };
 
 const initSelected = {
@@ -24,7 +25,7 @@ const initSelected = {
 const ContactForm = ({}) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [selected, setSelected] = useState(initSelected);
-  const { name, contact } = formFields;
+  const { name, contact, message } = formFields;
 
   const handleSelect = (option) => {
     const selectedOption = contactsInputOptions.find(
@@ -74,7 +75,12 @@ const ContactForm = ({}) => {
           handleChange={handleChange}
         />
       </div>
-      <Textarea placeholder="Message" />
+      <Textarea
+        name="message"
+        placeholder="Message"
+        handleChange={handleChange}
+        value={message}
+      />
 
       <div className={styles.formFooter}>
         <Button

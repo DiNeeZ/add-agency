@@ -92,15 +92,6 @@
     &.buttons {
       gap: 1rem;
     }
-
-    li:nth-child(2) > div {
-      flex-direction: column;
-      gap: 0.25em;
-
-      & > * {
-        width: 100%;
-      }
-    }
   }
 }
 
@@ -165,12 +156,11 @@
   }
 
   .navigation {
-    display: none;
+    flex-grow: 0;
+    width: auto;
   }
-}
 
-@include mobile {
-  .navigation {
+  .linksGroup {
     display: none;
   }
 }

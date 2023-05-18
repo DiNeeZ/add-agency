@@ -14,7 +14,7 @@ const defaultFormFields = {
   password: "",
 };
 
-const RegisterForm = ({ handleClose }) => {
+const RegisterForm = ({ handleClose, handleRedirect }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [activeTab, setActiveTab] = useState("advertiser");
   const { email, password } = formFields;
@@ -48,6 +48,19 @@ const RegisterForm = ({ handleClose }) => {
       >
         Register as
       </Title>
+      <p className={styles.redirect}>
+        Already have an account?{" "}
+        <button
+          style={{ cursor: "pointer" }}
+          href="/"
+          className={
+            activeTab === "advertiser" ? styles.purpleLink : styles.tealLink
+          }
+          onClick={handleRedirect}
+        >
+          Log In
+        </button>
+      </p>
       <div className={styles.buttons}>
         <button
           data-button-name="advertiser"
@@ -94,11 +107,26 @@ const RegisterForm = ({ handleClose }) => {
           Register
         </Button>
         <div className={styles.policy}>
-          By clicking &quot;register&quot; I agree to
-          <Link href="/" target={"_blank"}>
+          By clicking &quot;register&quot; I agree to{" "}
+          <Link
+            href="/"
+            target={"_blank"}
+            className={
+              activeTab === "advertiser" ? styles.purpleLink : styles.tealLink
+            }
+          >
             the processing of personal data
-          </Link>
-          and the privacy policy
+          </Link>{" "}
+          and the{" "}
+          <Link
+            href="/"
+            target={"_blank"}
+            className={
+              activeTab === "advertiser" ? styles.purpleLink : styles.tealLink
+            }
+          >
+            privacy policy
+          </Link>{" "}
         </div>
       </div>
     </div>

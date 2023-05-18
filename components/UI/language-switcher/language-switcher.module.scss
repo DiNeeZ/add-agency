@@ -78,3 +78,9 @@
   color: currentColor;
   outline: none;
 }
+
+@include small-tablet {
+  .selector {
+    display: none;
+  }
+}

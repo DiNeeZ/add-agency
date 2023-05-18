@@ -19,7 +19,7 @@ const MotionParagraph = motion(Paragraph);
 const MotionButton = motion(Button);
 
 const Hero = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   return (
     <motion.section
@@ -54,14 +54,17 @@ const Hero = () => {
             variants={textAnimation()}
             custom={4}
             className={styles.button}
-            handleClick={() => setIsOpen(!isOpen)}
+            handleClick={() => setIsRegisterModalOpen(!isRegisterModalOpen)}
           >
             Register
           </MotionButton>
         </div>
 
-        <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
-          <RegisterForm handleClose={() => setIsOpen(false)} />
+        <Modal
+          handleClose={() => setIsRegisterModalOpen(false)}
+          isOpen={isRegisterModalOpen}
+        >
+          <RegisterForm handleClose={() => setIsRegisterModalOpen(false)} />
         </Modal>
 
         <div className={styles.imageWrapper}>
