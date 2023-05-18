@@ -11,6 +11,11 @@
 }
 
 @include small-tablet {
+  .logo {
+    margin-left: 0;
+    padding: 0;
+  }
+
   .text {
     display: none;
   }
