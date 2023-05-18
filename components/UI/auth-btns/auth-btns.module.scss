@@ -7,6 +7,10 @@
 
 .loginMobile {
   display: none;
+
+  button {
+    padding: 0 !important;
+  }
 }
 
 @include tablet {
